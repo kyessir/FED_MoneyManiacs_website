@@ -1,2 +1,72 @@
+body,div{
+  background-color: #f0ead2;
+}
+  
+#basicAccordion{
+  margin: 0 auto;
+  width: 50%;
+  background-color: #f0ead2;
+}
+.btn{
+  background-color: #6C584C;
+  border-radius: 10px;
+  color: #f0ead2;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
+.bg-custom {
+  background-color: #f0ead2; /* Replace with your preferred color code or name */
+}
+.text-custom {
+  background-color: #6C584C; /* Replace with your preferred color code or name */
+}
+.col-md-2 col-lg-2 col-xl-2 mx-auto mt-3{
+  color:#6C584C;
+}
+.col-md-3 col-lg-2 col-xl-2 mx-auto mt-3{
+  color:#6C584C;
+}
+
+
+/* Style for the accordion items and accordion body */
+.accordion-item,
+.accordion-body {
+  background-color: #f0ead2; /* Set your desired background color */
+}
+
+/* Style for the active (expanded) accordion item */
+.accordion-item.active {
+  background-color: #d3d3d3; /* Set your desired background color for active item */
+}
+
+.accordion w-100 {
+  background-color: #f0ead2; /* Set your desired background color */
+}
+
+  .login__submit {
+    background: #fff;
+    font-size: 14px;
+    margin-top: 30px;
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1px solid #D4D3E8;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #4C489D;
+    box-shadow: 0px 2px 2px #5C5696;
+    cursor: pointer;
+    transition: .2s;
+  }
+  
+  .login__submit:active,
+  .login__submit:focus,
+  .login__submit:hover {
+    border-color: #6A679E;
+    outline: none;
+  }
 
