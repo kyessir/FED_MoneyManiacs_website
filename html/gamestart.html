@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/gamestart.css">
+    <title>Trial</title>
+</head>
+<body>
+    <section class="top">
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="button-3" role="button" onclick="openOverlay()">New Record</button>
+            <button class="button-3" role="button" onclick="openOverlay1()">Analysis</button>
+            <button class="button-3" role="button" onclick="openOverlay2()">Achievements</button>
+        </div>
+    </section>
+
+    <!-- Overlay for New Record-->
+    <div id="overlay" class="overlay">
+        <div id="overlay-content">
+            <button onclick="closeOverlay()">Close</button>
+            <h3>Today</h3>
+            <form>
+              <input type="radio" id="needs" name="record_cat" value="needs">
+              <label for="needs">Needs</label><br>
+              <input type="radio" id="wants" name="record_cat" value="wants">
+              <label for="wants">Wants</label><br>
+              <input type="radio" id="saved" name="record_cat" value="saved">
+              <label for="saved">Saved</label>
+            </form>
+            <hr>
+            <span>$ </span>
+            <input type="number" min="1" step="any" />
+            <button onclick="closeOverlay()">Record</button>
+        </div>
+    </div>
+
+    <!-- Overlay for Analysis-->
+    <div id="overlay1" class="overlay">
+        <div id="overlay-content">
+            <button onclick="closeOverlay1()">Close</button>
+            <h3>Weekly Analysis</h3>
+            <!-- chart.js goes here-->
+        </div>
+    </div>
+
+    <!-- Overlay for achievements-->
+    <div id="overlay2" class="overlay">
+        <div id="overlay-content">
+            <button onclick="closeOverlay2()">Close</button>
+            <h3>Achievements</h3>
+            <!-- list of achievements goes here-->
+        </div>
+    </div>
+    
+    <script src="../js/gamestart.js"></script>
+</body>
+</html>
