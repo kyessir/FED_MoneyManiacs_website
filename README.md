@@ -1,6 +1,6 @@
 # FED_Money Maniacs
 
-Absolutely, here's a template for your README.md file:
+Website link: https://siankimm.github.io/FED_MoneyManiacs_website/
 
 ---
 
