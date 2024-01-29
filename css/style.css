@@ -1,12 +1,31 @@
 body,div{
   background-color: #f0ead2;
 }
+
+@font-face {
+  font-family: 'Alata';
+  src: url('../font/Alata/Alata-Regular.ttf');
+}
   
 #basicAccordion{
   margin: 0 auto;
   width: 50%;
   background-color: #f0ead2;
 }
+
+/*homepage banner--------------------------------------------------------------------------------------------------------------------*/
+.homepage-banner{
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.homepage-banner img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*button---------------------------------------------------------------------------------------------------------*/
 .btn{
   background-color: #6C584C;
   border-radius: 10px;
