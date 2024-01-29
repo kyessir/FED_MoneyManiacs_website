@@ -25,6 +25,23 @@ body,div{
   display: block;
 }
 
+/*cards-----------------------------------------------------------------------------------------------------------------*/
+.all-services{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.card{
+  width: 200px; /* Set the width of your card */
+  margin-right: 20px; /* Adjust the margin to create the gap between cards */
+}
+
+.card:last-child {
+  margin-right: 0; /* Remove the margin from the last card to avoid extra gap */
+}
+
+
 /*button---------------------------------------------------------------------------------------------------------*/
 .btn{
   background-color: #6C584C;
