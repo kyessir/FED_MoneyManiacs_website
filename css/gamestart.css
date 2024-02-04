@@ -3,10 +3,34 @@
 }
 
 body{
-    background-image: url("trial.png");
+    background-image: url("../img/map_00.png");
     background-size:cover;
     padding: 0;
     margin:0;
+}
+
+header {
+  background-color: #333;
+  padding: 10px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-button {
+  font-size: 24px; /* Set the font size to adjust the icon size */
+  color: #fff; /* Set the color of your home button */
+  text-decoration: none;
+}
+
+.home-button:hover {
+  text-decoration: underline; /* Add underline on hover if desired */
+}
+
+.buttons-all {
+  display: flex;
 }
 
 .button-3 {
@@ -57,6 +81,11 @@ body{
 .button-3:active {
   background-color: #298e46;
   box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+/* Align the buttons to the right */
+.header-container .buttons-all {
+  margin-left: auto;
 }
 
 .overlay {
