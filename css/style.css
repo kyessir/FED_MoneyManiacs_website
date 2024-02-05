@@ -1,14 +1,46 @@
 body,div{
   background-color: #f0ead2;
 }
-  
-#basicAccordion{
-  margin: 0 auto;
-  width: 50%;
-  background-color: #f0ead2;
+
+@font-face {
+  font-family: 'Alata';
+  src: url('../font/Alata/Alata-Regular.ttf');
 }
+
+
+
+/*homepage banner--------------------------------------------------------------------------------------------------------------------*/
+.homepage-banner{
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.homepage-banner img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*cards-----------------------------------------------------------------------------------------------------------------*/
+.all-services{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.card{
+  width: 200px; /* Set the width of your card */
+  margin-right: 20px; /* Adjust the margin to create the gap between cards */
+}
+
+.card:last-child {
+  margin-right: 0; /* Remove the margin from the last card to avoid extra gap */
+}
+
+
+/*button---------------------------------------------------------------------------------------------------------*/
 .btn{
-  background-color: #6C584C;
+  background-color: #adc178;
   border-radius: 10px;
   color: #f0ead2;
   padding: 12px 16px;
@@ -30,43 +62,99 @@ body,div{
 }
 
 
-/* Style for the accordion items and accordion body */
-.accordion-item,
-.accordion-body {
-  background-color: #f0ead2; /* Set your desired background color */
+/* Container for the two columns */
+.container {
+  display: flex;
+  flex-direction: column; /* Change to column layout for responsiveness */
 }
 
-/* Style for the active (expanded) accordion item */
-.accordion-item.active {
-  background-color: #d3d3d3; /* Set your desired background color for active item */
+/* Styles for the left column containing text */
+.col-left {
+  margin-bottom: 20px; /* Add margin between columns */
 }
 
-.accordion w-100 {
-  background-color: #f0ead2; /* Set your desired background color */
+.h2-section-title,
+.h3-section-sub-title,
+.number-small {
+  color: #adc178;
+  font-family: Parabole, sans-serif;
 }
 
-  .login__submit {
-    background: #fff;
-    font-size: 14px;
-    margin-top: 30px;
-    padding: 16px 20px;
-    border-radius: 26px;
-    border: 1px solid #D4D3E8;
-    text-transform: uppercase;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    color: #4C489D;
-    box-shadow: 0px 2px 2px #5C5696;
-    cursor: pointer;
-    transition: .2s;
+.h2-section-title {
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 90px;
+}
+
+.h3-section-sub-title {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 38px;
+  margin-top: 0;
+  margin-right: 10%;
+}
+
+.number-small {
+  font-size: 40px;
+  line-height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Styles for the right column containing paragraphs and headings */
+.col-right {
+  margin-bottom: 20px; /* Add margin between columns */
+}
+
+.p1,
+.space-10 {
+  color: #575757;
+  margin-bottom: 10px;
+  font-family: Graphik, sans-serif;
+  font-size: 16px;
+  line-height: 27px;
+}
+
+.number-small-text {
+  transform: rotate(-90deg);
+  color: #adc178;
+  font-family: Parabole, sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+  margin-right: 100%;
+  margin-top: 10%;
+}
+
+.h2-section-title-rotate-text {
+  transform: rotate(-90deg);
+  color: #adc178;
+  font-family: Parabole, sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 90px;
+  margin-right: 90%;
+  margin-top: 30%;
+  margin-left: 10%;
+  margin-bottom: 70%;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (min-width: 768px) {
+  .container {
+    flex-direction: row; /* Change back to row layout for larger screens */
   }
-  
-  .login__submit:active,
-  .login__submit:focus,
-  .login__submit:hover {
-    border-color: #6A679E;
-    outline: none;
+
+  .col-left,
+  .col-right {
+    flex: 1;
+    margin-bottom: 0; /* Remove margin between columns */
   }
 
+  .h2-section-title-rotate-text {
+    margin-left: 0; /* Adjust margin for larger screens */
+  }
+}
+
+.container-fluid.p-4.pb-0, .row, .mt-3,.p-3,.pt-0, .text-md-start{
+  background-color: #adc178;
+}
