@@ -1,50 +1,31 @@
-body,div{
-  background-color: #f0ead2;
+*{
+  box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'Alata';
-  src: url('../font/Alata/Alata-Regular.ttf');
-}
-  
-#basicAccordion{
-  margin: 0 auto;
-  width: 50%;
+body,div{
   background-color: #f0ead2;
 }
 
 /*homepage banner--------------------------------------------------------------------------------------------------------------------*/
 .homepage-banner{
   max-width: 100%;
-  overflow: hidden;
+  height: 100vh;
+  overflow:inherit;
+  background-image: url("../img/homepage-moneyfalling.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
 }
 
-.homepage-banner img{
-  width: 100%;
-  height: auto;
-  display: block;
+#intro-para{
+  text-align: center;
 }
-
-/*cards-----------------------------------------------------------------------------------------------------------------*/
-.all-services{
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-.card{
-  width: 200px; /* Set the width of your card */
-  margin-right: 20px; /* Adjust the margin to create the gap between cards */
-}
-
-.card:last-child {
-  margin-right: 0; /* Remove the margin from the last card to avoid extra gap */
-}
-
 
 /*button---------------------------------------------------------------------------------------------------------*/
 .btn{
-  background-color: #6C584C;
+  background-color: #a98467;
   border-radius: 10px;
   color: #f0ead2;
   padding: 12px 16px;
@@ -53,10 +34,10 @@ body,div{
 }
 
 .bg-custom {
-  background-color: #f0ead2; /* Replace with your preferred color code or name */
+  background-color: #f0ead2;
 }
 .text-custom {
-  background-color: #6C584C; /* Replace with your preferred color code or name */
+  background-color: #6C584C;
 }
 .col-md-2 col-lg-2 col-xl-2 mx-auto mt-3{
   color:#6C584C;
@@ -66,43 +47,110 @@ body,div{
 }
 
 
-/* Style for the accordion items and accordion body */
-.accordion-item,
-.accordion-body {
-  background-color: #f0ead2; /* Set your desired background color */
+/* Container for the two columns ------------------------------------------------------------------------------------------*/
+/* Apply styles to the outermost .container */
+.container {
+  display: flex;
 }
 
-/* Style for the active (expanded) accordion item */
-.accordion-item.active {
-  background-color: #d3d3d3; /* Set your desired background color for active item */
+/* Apply styles to the columns within the outermost .container */
+.container > .col-left {
+  flex: 0 0 30%; /* Set the first column to take 30% of the width */
 }
 
-.accordion w-100 {
-  background-color: #f0ead2; /* Set your desired background color */
+.container > .col-right {
+  flex: 0 0 70%; /* Set the second column to take 70% of the width */
 }
 
-  .login__submit {
-    background: #fff;
-    font-size: 14px;
-    margin-top: 30px;
-    padding: 16px 20px;
-    border-radius: 26px;
-    border: 1px solid #D4D3E8;
-    text-transform: uppercase;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    color: #4C489D;
-    box-shadow: 0px 2px 2px #5C5696;
-    cursor: pointer;
-    transition: .2s;
+/* Additional styling for the inner .container */
+.container .container {
+  display: flex;
+}
+
+/* Apply styles to the columns within the inner .container */
+.container .container > .col-left {
+  flex: 0 0 30%; /* Set the first column to take 30% of the width */
+}
+
+.container .container > .col-right {
+  flex: 0 0 70%; /* Set the second column to take 70% of the width */
+}
+
+.h2-section-title,
+.h3-section-sub-title,
+.number-small {
+  color: #6c584c;
+  font-family: 'DM Serif Display', serif;
+}
+
+.h2-section-title {
+  font-size: 4.9rem;
+  font-weight: 400;
+  line-height: 90px;
+}
+
+.h3-section-sub-title {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 38px;
+  margin-right: 10%;
+}
+
+.number-small {
+  font-size: 40px;
+  line-height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.p1,
+.space-10 {
+  color: #6c584c;
+  margin-bottom: 10px;
+  font-family: 'Alata', sans-serif;
+  font-size: 16px;
+  line-height: 27px;
+}
+
+.number-small-text {
+  transform: rotate(-90deg);
+  color: #6c584c;
+  font-family: 'DM Serif Display', serif;
+  font-size: 40px;
+  line-height: 40px;
+  margin-right: 100%;
+  margin-top: 10%;
+}
+
+.h2-section-title-rotate-text {
+  transform: rotate(-90deg);
+  color: #6c584c;
+  font-family: 'DM Serif Display', serif;
+  font-size: 4.9rem;
+  font-weight: 400;
+  line-height: 90px;
+  margin-right: 60%;
+  margin-top: 30%;
+  margin-left: 30%;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (min-width: 768px) {
+  .container {
+    flex-direction: row; /* Change back to row layout for larger screens */
   }
-  
-  .login__submit:active,
-  .login__submit:focus,
-  .login__submit:hover {
-    border-color: #6A679E;
-    outline: none;
+
+  .col-left,
+  .col-right {
+    flex: 1;
+    margin-bottom: 0; /* Remove margin between columns */
   }
 
+  .h2-section-title-rotate-text {
+    margin-left: 0; /* Adjust margin for larger screens */
+  }
+}
+
+.container-fluid.p-4.pb-0, .row, .mt-3,.p-3,.pt-0, .text-md-start{
+  background-color: #adc178;
+}
