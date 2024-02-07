@@ -1,3 +1,7 @@
+body,div{
+  background-color: #f0ead2;
+}
+
 *{
   box-sizing: border-box;
 }
@@ -6,86 +10,82 @@ body,div{
   background-color: #f0ead2;
 }
 
-@font-face {
-  font-family: 'Alata';
-  src: url('../font/Alata/Alata-Regular.ttf');
-}
-
-
-
 /*homepage banner--------------------------------------------------------------------------------------------------------------------*/
 .homepage-banner{
   max-width: 100%;
-  overflow: hidden;
+  height: 100vh;
+  overflow:inherit;
+  background-image: url("../img/homepage-moneyfalling.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
 }
 
-.homepage-banner img{
-  width: 100%;
-  height: auto;
-  display: block;
+#intro-para{
+  text-align: center;
+  place-items: center;
 }
 
-/*cards-----------------------------------------------------------------------------------------------------------------*/
-.all-services{
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
+#intro-para h2 + p{
+  color: #000000;
 }
-
-.card{
-  width: 200px; /* Set the width of your card */
-  margin-right: 20px; /* Adjust the margin to create the gap between cards */
-}
-
-.card:last-child {
-  margin-right: 0; /* Remove the margin from the last card to avoid extra gap */
-}
-
 
 /*button---------------------------------------------------------------------------------------------------------*/
 .btn{
-  background-color: #adc178;
+  background-color: #6C584C;
   border-radius: 10px;
   color: #f0ead2;
   padding: 12px 16px;
-  font-size: 16px;
-  cursor: pointer;
 }
 
-.bg-custom {
-  background-color: #f0ead2;
-}
 .text-custom {
   background-color: #6C584C;
 }
 .col-md-2 col-lg-2 col-xl-2 mx-auto mt-3{
   color:#6C584C;
-}
-.col-md-3 col-lg-2 col-xl-2 mx-auto mt-3{
-  color:#6C584C;
+  background-color: #f0ead2; 
+  
 }
 
-
-/* Container for the two columns */
+/* Container for the two columns ------------------------------------------------------------------------------------------*/
+/* Apply styles to the outermost .container */
 .container {
   display: flex;
-  flex-direction: column; /* Change to column layout for responsiveness */
 }
 
-/* Styles for the left column containing text */
-.col-left {
-  margin-bottom: 20px; /* Add margin between columns */
+/* Apply styles to the columns within the outermost .container */
+.container > .col-left {
+  flex: 0 0 30%; /* Set the first column to take 30% of the width */
+}
+
+.container > .col-right {
+  flex: 0 0 70%; /* Set the second column to take 70% of the width */
+}
+
+/* Additional styling for the inner .container */
+.container .container {
+  display: flex;
+}
+
+/* Apply styles to the columns within the inner .container */
+.container .container > .col-left {
+  flex: 0 0 30%; /* Set the first column to take 30% of the width */
+}
+
+.container .container > .col-right {
+  flex: 0 0 70%; /* Set the second column to take 70% of the width */
 }
 
 .h2-section-title,
 .h3-section-sub-title,
 .number-small {
-  color: #adc178;
-  font-family: Parabole, sans-serif;
+  color: #6c584c;
+  font-family: 'DM Serif Display', serif;
 }
-
 .h2-section-title {
-  font-size: 80px;
+  font-size: 4.9rem;
   font-weight: 400;
   line-height: 90px;
 }
@@ -94,7 +94,6 @@ body,div{
   font-size: 30px;
   font-weight: 500;
   line-height: 38px;
-  margin-top: 0;
   margin-right: 10%;
 }
 
@@ -105,24 +104,19 @@ body,div{
   margin-bottom: 10px;
 }
 
-/* Styles for the right column containing paragraphs and headings */
-.col-right {
-  margin-bottom: 20px; /* Add margin between columns */
-}
-
 .p1,
 .space-10 {
-  color: #575757;
+  color: #6c584c;
   margin-bottom: 10px;
-  font-family: Graphik, sans-serif;
+  font-family: 'Alata', sans-serif;
   font-size: 16px;
   line-height: 27px;
 }
 
 .number-small-text {
   transform: rotate(-90deg);
-  color: #adc178;
-  font-family: Parabole, sans-serif;
+  color: #6c584c;
+  font-family: 'DM Serif Display', serif;
   font-size: 40px;
   line-height: 40px;
   margin-right: 100%;
@@ -131,21 +125,32 @@ body,div{
 
 .h2-section-title-rotate-text {
   transform: rotate(-90deg);
-  color: #adc178;
-  font-family: Parabole, sans-serif;
-  font-size: 80px;
+  color: #6c584c;
+  font-family: 'DM Serif Display', serif;
+  font-size: 4.9rem;
   font-weight: 400;
   line-height: 90px;
-  margin-right: 82%;
+  margin-right: 60%;
   margin-top: 30%;
-  margin-left: 10%;
-  margin-bottom: 70%;
+  margin-left: 30%;
+}
+
+/*footer--------------------------------------------------------------------------------------------------------------*/
+.container-fluid.p-4.pb-0, .row, .mt-3,.p-3,.pt-0, .text-md-start{
+  background-color: #6c584c;
 }
 
 /* Media queries for responsiveness */
 @media only screen and (min-width: 768px) {
   .container {
     flex-direction: row; /* Change back to row layout for larger screens */
+  }
+
+  .login__submit:active,
+  .login__submit:focus,
+  .login__submit:hover {
+    border-color: #6A679E;
+    outline: none;
   }
 
   .col-left,
@@ -157,8 +162,4 @@ body,div{
   .h2-section-title-rotate-text {
     margin-left: 0; /* Adjust margin for larger screens */
   }
-}
-
-.container-fluid.p-4.pb-0, .row, .mt-3,.p-3,.pt-0, .text-md-start{
-  background-color: #adc178;
 }
