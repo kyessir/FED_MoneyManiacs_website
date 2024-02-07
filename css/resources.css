@@ -1,4 +1,5 @@
 body{
+body{
   background-color: #f0ead2;
 }
 
@@ -17,54 +18,31 @@ body{
   font-size: 20px; /* Adjust the font size as needed */
 }
 
-.card-footer p-3{
-  background-color: #a98467;
-}
+/*navbar pages font size---------------------------------------------------------------------------------------------------------*/
+/*.navbar-nav .nav-link {
+  font-size: 20px;
+}*/
 
-/*button---------------------------------------------------------------------------------------------------------*/
-.btn-info{
-  border: none;
-  background-color: #adc178;
-  padding: 12px 48px 12px 24px;
-  border-radius: 4px;
-  color: #f0ead2;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='%23fff'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 24px center;
-}
-/*card---------------------------------------------------------------------------------------------------------*/
+/*card-------------------------------------------------------------------------------------------------------------------------*/
 .card-footer.p-2{
   background-color: #adc178;
 }
 
 .p-2{
-  background-color: #adc178;
+  background-color: #a98467;
 }
 
+.card-footer p-3{
+  background-color: #a98467;
+}
+
+/*search bar---------------------------------------------------------------------------------------------------------*/
 input[type=text] {
   width: 130px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
   color: #6C584C;
 }
 
-/* When the input field gets focus, change its width to 100% */
-input[type=text]:focus {
-  width: 100%;
-}
-
-  input[type=text] {
-    width: 130px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-  }
-  
-  /* When the input field gets focus, change its width to 100% */
-  input[type=text]:focus {
-    width: 100%;
-  }
-
-  /* The switch - the box around the slider */
+/* The switch - the box around the slider */
 .switch {
   position: relative;
   display: inline-block;
@@ -79,55 +57,7 @@ input[type=text]:focus {
   height: 0;
 }
 
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #adc178;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #adc178;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-/* Container for the two columns */
+/* Container for the two columns ------------------------------------------------------------------------------------------*/
 .container {
   display: flex;
   flex-direction: column; /* Change to column layout for responsiveness */
@@ -135,18 +65,24 @@ input:checked + .slider:before {
 
 /* Styles for the left column containing text */
 .col-left {
-  margin-bottom: 20px; /* Add margin between columns */
+  margin-bottom: 20px;
 }
 
+/* Styles for the right column containing paragraphs and headings */
+.col-right {
+  margin-bottom: 20px;
+}
+
+/*font and content-----------------------------------------------------------------------------------------------*/
 .h2-section-title,
 .h3-section-sub-title,
 .number-small {
-  color: #adc178;
-  font-family: Parabole, sans-serif;
+  color: #6c584c;
+  font-family: 'DM Serif Display', serif;
 }
 
 .h2-section-title {
-  font-size: 80px;
+  font-size: 4.9rem;
   font-weight: 400;
   line-height: 90px;
 }
@@ -155,62 +91,35 @@ input:checked + .slider:before {
   font-size: 30px;
   font-weight: 500;
   line-height: 38px;
-  margin-top: 0;
-  margin-right: 10%;
+  margin-right: 5%;
 }
 
-
-
-/* Styles for the right column containing paragraphs and headings */
-.col-right {
-  margin-bottom: 20px; /* Add margin between columns */
-  
+.number-small {
+  font-size: 40px;
+  line-height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .p1,
 .space-10 {
   color: #575757;
   margin-bottom: 10px;
-  font-family: Graphik, sans-serif;
+  font-family: 'Alata', sans-serif;
   font-size: 16px;
   line-height: 27px;
 }
 
-.number-small-text {
-  transform: rotate(-90deg);
-  color: #adc178;
-  font-family: Parabole, sans-serif;
-  font-size: 40px;
-  line-height: 40px;
-  margin-right: 100%;
-  margin-top: 10%;
-}
-
-
 .row.row-cols-1.row-cols-md-3.g-4 {
   justify-content: flex-end;
-  margin-bottom: 40%; /* Add a margin-bottom value to create space below the item */
-  margin-top: -60px;
+  margin-bottom: 5%;
+  margin-top: -70px;
 }
 
-/* Pagination links */
-.pagination a {
-  color: black;
-  float: center;
-  padding: 8px 16px;
-  text-decoration: none;
-  transition: background-color .3s;
+#top{
+  margin-top: -180px;
 }
 
-/* Style the active/current link */
-.pagination a.active {
-  background-color: dodgerblue;
-  color: white;
-}
-
-/* Add a grey background color on mouse-over */
-.pagination a:hover:not(.active) {background-color: #ddd;}
-.pagination {
-  display: flex;
-  justify-content: center;
+.row{
+  margin-left: 5%;
 }
