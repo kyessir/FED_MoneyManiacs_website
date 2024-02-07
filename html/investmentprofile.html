@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Money Manaics</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alata&family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <link rel="stylesheet" href="../css/resources.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/profile.css">
+
 </head>
 <body>
-  <!--navbar!-->
+     <!--navbar!-->
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-custom">
       <a class="navbar-brand" href="index.html">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <lottie-player src="https://lottie.host/db66b354-63be-4373-86d8-9d8342e9e57e/EP0YOoPGdu.json" background="transparent" speed="1" style="width: 100px; height: 100px" loop autoplay class="logo"></lottie-player>
+        <lottie-player src="https://lottie.host/db66b354-63be-4373-86d8-9d8342e9e57e/EP0YOoPGdu.json" background="transparent" speed="1" style="width: 120px; height: 120px" loop autoplay class="logo"></lottie-player>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -26,167 +25,237 @@
           <a class="nav-item nav-link" href="gamestart.html">Game</a>
           <a class="nav-item nav-link" href="investmentquiz.html">Investment Risk Quiz</a>
           <a class="nav-item nav-link" href="resources.html">Financial Resources</a>
+          <!-- <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
         </div>
       </div>
     </nav>
 
-    <div class="container">
-      <div class="col col-left">
-        <!-- Left column content -->
-        <div class="col">
-          <h2 class="h2-section-title">RESOURCES</h2>
-        </div>
-        <div class="mt-2"> <!-- Add a margin-top to create space for the new row -->
-          <h4 style="text-align: center;">Introduction to Inflation and <br>the Inflation in Digital Age</h4>
-      </div>
-      </div>
-      <div class="card-footer p-2 text-center">
-         <a href="../html/resources2.html" class="btn-info">Resource 2 button</a>
-      </div>
-      <div class="col col-right">
-        <!-- Right column content -->
-        <h3 class="h3-section-sub-title mr-10">Empower Your Finances:</h3>
-        <div class="space-10"></div>
-        <br>
-        <p class="p1">Unlock Financial Wisdom, Access a Diverse Repository of Financial Literacy Articles and Navigate Towards Financial Security with Confidence.
-        </p>
-      </div>
-    </div>
-    <hr>
+  
 
-    <section id="big-container">
-    <!-- Filter radio buttons -->
+  <div class="head">Investment <br> Risk Profile</div>
+
+  <br>
+
+
+
+    <div class="containerinfo1">
+      <div class="row">
+        <div style="text-align: center;">
+          <h3 class="class1">What is a Risk Profile?</h3>
+          <p>
+             Your risk profile looks at how much risk you can afford to take on as an investor. It’s a key part of determining the asset<br>
+             allocation in your investment portfolio. It tells you how to balance the asset classes you invest in, i.e. stocks vs. bonds, as well as<br>
+              the type of assets in each class, i.e. low-yield treasury or municipal bonds vs. high-yield, junk bonds.
+            </p>
+        </div>
+      </div>
+        <div style="background-color: #f0ead2"> <br></div> 
+
+<div class="containerinfo2">
     <div class="row">
-      <h3 class="h3-section-sub-title mr-10">Filter By</h3>
-      <div class="col">
-        <table>
-          <tr>
-            <td>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="filter" id="filter-all" value="all" checked>
-                <label class="form-check-label" for="filter-all">All</label>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="filter" id="filter-youths" value="youths">
-                <label class="form-check-label" for="filter-retirement">Youths</label>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="filter" id="filter-adults" value="adults">
-                <label class="form-check-label" for="filter-category2">Adults</label>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="filter" id="filter-retirement" value="retirement">
-                <label class="form-check-label" for="filter-retirement">Retirement</label>
-              </div>
-            </td>
-          </tr>
-        </table>
-
-        <!-- Search bar -->
-        <div class="col-md-3"> 
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for resources...">
-            <button class="btn btn-primary">Search</button>
-          </div>
-        </div>
+      <div style="text-align: center;">
+      <h3 class="class1">Risk Profile Test Methodology</h3> 
+      <p>
+        To give you a final score, we multiply the results of the G/L-RTS with the multiplying factors given below.<br>
+        The score of the G/L-RTS ranges from 13 to 47, with higher scores representing higher risk tolerances.<br>
+        Here are the multiplying factors used with the risk capacity questions.
+        </p> 
       </div>
-    </div>
-
-<div class="row">
-  <div class="row row-cols-1 row-cols-md-3 g-4" id="top">
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-        <img src="../img/resource1.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h6 class="card-title">Adults</h6>
-          <h5 class="cardi-title1">Intro to Financial Literacy</h5>
-          <a href="../html/resources1.html" class="btn btn-primary">Read more</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-        <img src="../img/resource2.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h6 class="card-title">Adults</h6>
-          <h5 class="cardi-title1">Introduction to Inflation & its Effects in Digital Age</h5>
-          <a href="../html/resources2.html" class="btn btn-primary">Read more</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-        <img src="../img/resource3.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h6 class="card-title">Adults</h6>
-          <h5 class="cardi-title1">How to save money during inflation</h5>
-          <a href="../html/resources3.html" class="btn btn-primary">Read more</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-        <img src="../img/resource4.jpeg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h6 class="card-title">Youths</h6>
-          <h5 class="cardi-title1">Budgeting for Beginners</h5>
-          <a href="../html/resources4.html" class="btn btn-primary">Read more</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-        <img src="../img/resource5.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h6 class="card-title">Retirement</h6>
-          <h5 class="cardi-title1">How to save money during inflation</h5>
-          <a href="../html/resources5.html" class="btn btn-primary">Read more</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-        <img src="../img/resource6.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h6 class="card-title">Retirement</h6>
-          <h5 class="cardi-title1">Learn how to build your retirement fund</h5>
-          <a href="../html/resources6.html" class="btn btn-primary">Read more</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-        <img src="../img/resource7.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h6 class="card-title">Retirement</h6>
-          <h5 class="cardi-title1">Learn how to make informed decisions about healthcare and insurance options</h5>
-          <a href="../html/resources7.html" class="btn btn-primary">Read more</a>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
-</section>
 
-   <!--Footer!-->
+<br>
+
+<table style="text-align: center;" table class="table table-custom">
+  <thead>
+    <tr>
+
+      <th scope="col"><strong>Income Stability</strong></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Stable</th>
+      <td>1.1</td>
+      
+    </tr>
+    <tr>
+      <th scope="row">Unstable</th>
+      <td>0.8</td>
+    </tr>
+
+    <tr>
+      <th scope="row"><strong>Income Growth</strong></th>
+      <td></td>
+    </tr>
+
+    <tr>
+      <th scope="row">Growing by 6% or more</th>
+      <td>1.15</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Growing by 4-6%</th>
+      <td>1.05</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Growing by 2-4%</th>
+      <td>1</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Stagnant</th>
+      <td>0.8</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Shrinking</th>
+      <td>0.5</td>
+    </tr>
+
+    <tr>
+      <th scope="row"><strong>Investment Horizon</strong></th>
+      <td></td>
+    </tr>
+
+    <tr>
+      <th scope="row">1 year</th>
+      <td>0.8</td>
+    </tr>
+
+    <tr>
+      <th scope="row">2-3 years</th>
+      <td>0.9</td>
+    </tr>
+
+    <tr>
+      <th scope="row">3-7 years</th>
+      <td>1.05</td>
+    </tr>
+
+    <tr>
+      <th scope="row">7 or more years</th>
+      <td>1.3</td>
+    </tr>
+
+    <tr>
+      <th scope="row"><strong>Expected Return</strong></th>
+      <td></td>
+    </tr>
+
+    <tr>
+      <th scope="row">I want to crush the market</th>
+      <td>1.5</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Do a bit better than the market</th>
+      <td>1.2</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Match the market</th>
+      <td>1</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Stay safe</th>
+      <td>0.5</td>
+    </tr>
+
+    <tr>
+      <th scope="row"><strong>Experience</strong></th>
+      <td></td>
+    </tr>
+
+    <tr>
+      <th scope="row">Very experienced</th>
+      <td>1.2</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Some experience</th>
+      <td>1.05</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Little experience</th>
+      <td>0.9</td>
+    </tr>
+  
+    <tr>
+      <th scope="row">I have no experience</th>
+      <td>0.8</td>
+    </tr>
+
+    <tr>
+      <th scope="row"><strong>Knowledge</strong></th>
+      <td></td>
+    </tr>
+
+    <tr>
+      <th scope="row">Very knowledgeable</th>
+      <td>1.2</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Somewhat knowledgeable</th>
+      <td>1.05</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Little knowledge</th>
+      <td>0.9</td>
+    </tr>
+
+    <tr>
+      <th scope="row">No knowledge</th>
+      <td>0.8</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Risk Profile Test Results</h3>
+<table style="text-align: center;" table class="table table-custom">
+  <thead>
+    <tr>
+
+      <th scope="col"><strong>Overall Score</strong></th>
+      <th scope="col"><strong>Risk Profile</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">0-13</th>
+      <td>Very Conservative</td>
+    </tr>
+    <tr>
+   
+      <tr>
+        <th scope="row">13-26</th>
+        <td>Conservative</td>
+      </tr>
+
+      <tr>
+        <th scope="row">26-39</th>
+        <td>Balanced</td>
+      </tr>
+
+      <tr>
+        <th scope="row">39-47</th>
+        <td>Aggressive</td>
+      </tr>
+
+      <tr>
+        <th scope="row">47+</th>
+        <td>Very aggressive</td>
+      </tr>
+  </tbody>
+</table>
+  
+<!--Footer!-->
        <!-- Remove the container if you want to extend the Footer to full width. -->
        <footer class="text-center text-lg-start text-custom" style="background-color:  #adc178">
         <!-- Grid container -->
@@ -278,13 +347,9 @@
         <!-- Grid container -->
       </footer>
       <!-- Footer -->
-
-    <!-- Rest of your content goes here -->
-    <script src="../js/resource.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 </body>
 </html>

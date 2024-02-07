@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 body,div{
   background-color: #f0ead2;
 }
@@ -49,10 +53,10 @@ body,div{
 }
 
 .bg-custom {
-  background-color: #f0ead2; /* Replace with your preferred color code or name */
+  background-color: #f0ead2;
 }
 .text-custom {
-  background-color: #6C584C; /* Replace with your preferred color code or name */
+  background-color: #6C584C;
 }
 .col-md-2 col-lg-2 col-xl-2 mx-auto mt-3{
   color:#6C584C;
