@@ -48,14 +48,14 @@ input[type=text] {
 }
 
 /* Styles for the left column containing text */
-/*.col-left {
+.col-left {
   margin-bottom: 20px;
-}*/
+}
 
 /* Styles for the right column containing paragraphs and headings */
-/*.col-right {
+.col-right {
   margin-bottom: 20px;
-}*/
+}
 
 /*font and content-----------------------------------------------------------------------------------------------*/
 .h2-section-title,
@@ -75,7 +75,7 @@ input[type=text] {
   font-size: 30px;
   font-weight: 500;
   line-height: 38px;
-  margin-right: 10%;
+  margin-right: 5%;
 }
 
 .number-small {
@@ -89,26 +89,21 @@ input[type=text] {
 .space-10 {
   color: #575757;
   margin-bottom: 10px;
-  font-family: Graphik, sans-serif;
+  font-family: 'Alata', sans-serif;
   font-size: 16px;
   line-height: 27px;
 }
 
-.number-small-text {
-  transform: rotate(-90deg);
-  color: #adc178;
-  font-family: Parabole, sans-serif;
-  font-size: 40px;
-  line-height: 40px;
-  margin-right: 100%;
-  margin-top: 10%;
-}
-
-
 .row.row-cols-1.row-cols-md-3.g-4 {
   justify-content: flex-end;
-  margin-bottom: 40%; /* Add a margin-bottom value to create space below the item */
-  margin-top: -60px;
+  margin-bottom: 5%;
+  margin-top: -70px;
 }
 
+#top{
+  margin-top: -180px;
+}
 
+.row{
+  margin-left: 5%;
+}
