@@ -17,8 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         cards.forEach(card => {
             const cardCategory = card.querySelector('.card-title').innerText.toLowerCase();
-            const cardDate = card.querySelector('.card-title1').innerText.toLowerCase();
-            const cardDescription = card.querySelector('.card-body').innerText.toLowerCase();
             const isVisible = card.style.display !== 'none';
 
             // Check if card matches filter and search query
