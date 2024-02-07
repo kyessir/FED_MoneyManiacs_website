@@ -1,27 +1,11 @@
 body{
-body{
   background-color: #f0ead2;
-}
-
-/*body{
-  background-color: #130f40;
-}
-*/
-
-@font-face {
-  font-family: 'Alata';
-  src: url('../font/Alata/Alata-Regular.ttf');
 }
 
 /*navbar pages font size---------------------------------------------------------------------------------------------------------*/
 .navbar-nav .nav-link {
-  font-size: 20px; /* Adjust the font size as needed */
-}
-
-/*navbar pages font size---------------------------------------------------------------------------------------------------------*/
-/*.navbar-nav .nav-link {
   font-size: 20px;
-}*/
+}
 
 /*card-------------------------------------------------------------------------------------------------------------------------*/
 .card-footer.p-2{
