@@ -58,13 +58,15 @@ const fetchDataFromApi = async () => {
 // Call the function to fetch data when the script is executed
 fetchDataFromApi(); */
 
-//resource2.js 
-const apiKey = '4e007ac709c7435:1bwtg46ffp2iaa2';
-const apiUrl = 'https://api.tradingeconomics.com/news/country/mexico/inflation%20rate';
-//const apiUrl = `https://api.tradingeconomics.com/news/country/mexico/inflation%20rate?c=${apiKey}`;
+// resource2.js (retrieving API)
+
+
+// Script for the first API
+const apiKey1 = '4e007ac709c7435:1bwtg46ffp2iaa2';
+const apiUrl1 = 'https://api.tradingeconomics.com/news/country/mexico/inflation%20rate?c=' + apiKey1;
 
 // Function to update HTML elements with API data
-const updatePageWithApiData = (data) => {
+const updatePageWithApiData1 = (data) => {
   // Modify this part based on your HTML structure
   const tableBody = document.getElementById('data');
 
@@ -77,25 +79,25 @@ const updatePageWithApiData = (data) => {
 
     // Customize the cell content based on your API response structure
     const categoryCell = document.createElement('td');
-    categoryCell.textContent = entry.category;  // Use lowercase 'category'
+    categoryCell.textContent = entry.Category;
 
     const dateCell = document.createElement('td');
-    dateCell.textContent = entry.date;
+    dateCell.textContent = entry.Date;
 
     const descriptionCell = document.createElement('td');
-    descriptionCell.textContent = entry.description;
+    descriptionCell.textContent = entry.Description;
 
     const idCell = document.createElement('td');
-    idCell.textContent = entry.id;
+    idCell.textContent = entry.Id;
 
     const titleCell = document.createElement('td');
-    titleCell.textContent = entry.title;
+    titleCell.textContent = entry.Title;
 
     const symbolCell = document.createElement('td');
-    symbolCell.textContent = entry.symbol;
+    symbolCell.textContent = entry.Symbol;
 
     const countryCell = document.createElement('td');
-    countryCell.textContent = entry.country;
+    countryCell.textContent = entry.Country;
 
     // Append cells to the row
     row.appendChild(dateCell);
@@ -111,21 +113,21 @@ const updatePageWithApiData = (data) => {
   });
 };
 
-const fetchDataFromApi = async () => {
+// Function to fetch data from the first API
+const fetchDataFromApi1 = async () => {
   try {
-    const response = await fetch(`${apiUrl}?c=${apiKey}`);
-   //const response = await fetch(`${apiUrl}`);
+    const response = await fetch(apiUrl1);
     const data = await response.json(); // Assuming the API returns JSON data
-    console.log(data);
+
     // Update HTML elements with the received data
-    updatePageWithApiData(data);
+    updatePageWithApiData1(data);
   } catch (error) {
     console.error('Error fetching data:', error);
   }
 };
 
 // Call the function to fetch data when the script is executed
-fetchDataFromApi();
+fetchDataFromApi1();
 
 
 // Function to fetch data from the API
