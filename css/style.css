@@ -1,9 +1,14 @@
+body,div{
+  background-color: #f0ead2;
+}
+
 *{
   box-sizing: border-box;
 }
 
-body,div{
-  background-color: #f0ead2;
+/*navbar pages font size---------------------------------------------------------------------------------------------------------*/
+.navbar-nav .nav-link {
+  font-size: 20px;
 }
 
 /*homepage banner--------------------------------------------------------------------------------------------------------------------*/
@@ -21,31 +26,29 @@ body,div{
 
 #intro-para{
   text-align: center;
+  place-items: center;
+}
+
+#intro-para h2 + p{
+  color: #000000;
 }
 
 /*button---------------------------------------------------------------------------------------------------------*/
 .btn{
-  background-color: #a98467;
+  background-color: #6C584C;
   border-radius: 10px;
   color: #f0ead2;
   padding: 12px 16px;
-  font-size: 16px;
-  cursor: pointer;
 }
 
-.bg-custom {
-  background-color: #f0ead2;
-}
 .text-custom {
   background-color: #6C584C;
 }
 .col-md-2 col-lg-2 col-xl-2 mx-auto mt-3{
   color:#6C584C;
+  background-color: #f0ead2; 
+  
 }
-.col-md-3 col-lg-2 col-xl-2 mx-auto mt-3{
-  color:#6C584C;
-}
-
 
 /* Container for the two columns ------------------------------------------------------------------------------------------*/
 /* Apply styles to the outermost .container */
@@ -82,7 +85,6 @@ body,div{
   color: #6c584c;
   font-family: 'DM Serif Display', serif;
 }
-
 .h2-section-title {
   font-size: 4.9rem;
   font-weight: 400;
@@ -134,10 +136,22 @@ body,div{
   margin-left: 30%;
 }
 
+/*footer--------------------------------------------------------------------------------------------------------------*/
+.container-fluid.p-4.pb-0, .row, .mt-3,.p-3,.pt-0, .text-md-start{
+  background-color: #6c584c;
+}
+
 /* Media queries for responsiveness */
 @media only screen and (min-width: 768px) {
   .container {
     flex-direction: row; /* Change back to row layout for larger screens */
+  }
+
+  .login__submit:active,
+  .login__submit:focus,
+  .login__submit:hover {
+    border-color: #6A679E;
+    outline: none;
   }
 
   .col-left,
