@@ -1,24 +1,37 @@
-*{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
 body{
-    background-image: url("../img/map_00.png");
+    background-image: url("../img/map00.png");
     background-size:cover;
+    background-repeat: no-repeat;
     padding: 0;
     margin:0;
+
 }
 
-header {
-  background-color: #333;
-  padding: 10px;
+/*navbar-----------------------------------------------------------------------------------------------------*/
+nav {
+  height: 60px; /* Set the desired height of the navbar */
+  width: 100%; /* Make the navbar occupy the full width of the viewport */
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 100%; /* Make the header container fill the height of the navbar */
+  padding: 0 20px; /* Optional: Add padding to the header container */
 }
 
+.box img {
+  width: 40px; /* Set the width to your desired size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.box {
+  display: flex;
+  align-items: center;
+}
+
+/*home button------------------------------------------------------------------------------------------------------------*/
 .home-button {
   font-size: 24px; /* Set the font size to adjust the icon size */
   color: #fff; /* Set the color of your home button */
@@ -29,11 +42,12 @@ header {
   text-decoration: underline; /* Add underline on hover if desired */
 }
 
-.buttons-all {
+#buttons-all {
   display: flex;
 }
 
 .button-3 {
+  font-family: 'Alata', sans-serif;
   appearance: none;
   background-color: #2ea44f;
   border: 1px solid rgba(27, 31, 35, .15);
@@ -88,6 +102,7 @@ header {
   margin-left: auto;
 }
 
+/*overlay----------------------------------------------------------------------------------------------------------*/
 .overlay {
     display: none;
     position: fixed;
@@ -112,41 +127,4 @@ form{
     display: flex;
     flex-direction: row;
     gap: 15px;
-}
-
-input[type="radio"]{
-    display: none;
-}
-
-label{
-    position: relative;
-    color: #a98467;
-    font-family: 'Poppins', sans-serif;
-    font-size: 10px;
-    border: 2px solid #a98467;
-    border-radius: 5px;
-    padding: 10px 20px;
-    display: flex;
-    align-items:center;
-    cursor: pointer;
-}
-
-label:before{
-    content: "";
-    height: 10px;
-    width: 10px;
-    border: 3px solid #a98467;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-
-input[type="radio"]:checked + label{
-    background-color: #a98467;
-    color: white;
-}
-
-input[type="radio"]:checked + label:before{
-    height: 10px;
-    width: 10px;
-    border:#a98467
 }

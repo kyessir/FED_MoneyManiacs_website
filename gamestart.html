@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/gamestart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <title>Money Maniacs</title>
+    <title>Money Manager</title>
 </head>
 <body>
 
-    <header>
-        <div class="header-container">
-          <a href="index.html" class="home-button">&#127968;</a>
-          <div class="buttons-all">
-            <button class="button-3" role="button" onclick="openOverlay1()">New Record</button>
-            <button class="button-3" role="button" onclick="openOverlay2()">Analysis</button>
-            <button class="button-3" role="button" onclick="openOverlay3()">Achievements</button>
-          </div>
-        </div>
-      </header>
+  <nav>
+    <div class="header-container">
+      <div class="box">
+        <a href="index.html"><img class="svg-nav" src="img/left-arrow-svgrepo-com.svg" alt="back-arrow"></a>
+      </div>    
+      <div class="box" id="buttons-all">
+          <button class="button-3" role="button" onclick="openOverlay1()">New Record</button>
+          <button class="button-3" role="button" onclick="openOverlay2()">Record Book</button>
+          <button class="button-3" role="button" onclick="openOverlay3()">Achievements</button>
+      </div>
+    </div>
+  </nav>
     
     <!-- Overlay for New Record-->
     <div id="overlay1" class="overlay">
@@ -27,14 +32,16 @@
             <h3>Today</h3>
             <p>What did you spend on?</p>
             <input type="text" min="1" step="any" class='spendingPurpose'/>
-            <form>
-              <input type="radio" id="needs" name="record_cat" value="needs">
-              <label for="needs">Needs</label><br>
-              <input type="radio" id="wants" name="record_cat" value="wants">
-              <label for="wants">Wants</label><br>
-              <!-- <input type="radio" id="saved" name="record_cat" value="saved">
-              <label for="saved">Saved</label> -->
-            </form>
+            <hr>
+            <p>Is it a Need or a Want?</p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">Need</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">Want</label>
+            </div>
             <hr>
             <p>How much did you spend?</p>
             <span>$ </span>
@@ -44,12 +51,11 @@
         </div>
     </div>
 
-    <!-- Overlay for Analysis-->
+    <!-- Overlay for Record book-->
     <div id="overlay2" class="overlay">
         <div id="overlay-content">
             <button type="button" class="btn-close" aria-label="Close" onclick="closeOverlay2()"></button>
-            <h3>Weekly Analysis</h3>
-            <!-- chart.js goes here-->
+            <h3>Record Book</h3>
         </div>
     </div>
 
@@ -58,13 +64,44 @@
         <div id="overlay-content">
             <button type="button" class="btn-close" aria-label="Close" onclick="closeOverlay3()"></button>
             <h3>Achievements</h3>
-            <ol>
-                <li>Record one account.</li>
-                <li>Saved up 20% of income in 1 week.</li>
-                <li>Reached a financial goal.</li>
-                <li>No spending on 'Wants' for one week.</li>
-                <li>Finish the game!</li>
-            </ol>
+            <div class="achievements">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="../img/acc1.png" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <p class="card-title">Record once in the book.</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="../img/acc2.png" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <p class="card-title">Saved up 20% of your income.</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="../img/acc3.png" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <p class="card-title">Shout it out, game's completed!</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
