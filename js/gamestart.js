@@ -1,21 +1,3 @@
-/* username input */
-function getUsername() {
-    // Get the value of the username input
-    let username = document.getElementById("username").value;
-
-    // Check if the username is not empty
-    if (username.trim() !== "") {
-        localStorage.setItem("username", username);
-      window.location.href = "gamestart.html";
-    } else {
-      // Display an alert if the input is empty
-      alert("Please enter a valid username.");
-    }
-}
-
-// Add event listener to the login button
-document.getElementById("loginButton").addEventListener("click", getUsername);
-
 /*overlay opening*/
 function openOverlay1() {
     document.getElementById('overlay1').style.display = 'flex';
@@ -36,7 +18,7 @@ function closeOverlay3() {
     document.getElementById('overlay3').style.display = 'none';
 }
 
-
+/*gamestart.html-----------------------------------------------------------------------------------------------------------*/
 document.addEventListener("DOMContentLoaded", function() {
     // What kind of interface we want at the start
     const APIKEY = "65ae853b7d9e500806a56045";
