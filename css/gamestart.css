@@ -102,6 +102,7 @@ nav {
   margin-left: auto;
 }
 
+/*overlay----------------------------------------------------------------------------------------------------------*/
 .overlay {
     display: none;
     position: fixed;
@@ -126,41 +127,4 @@ form{
     display: flex;
     flex-direction: row;
     gap: 15px;
-}
-
-input[type="radio"]{
-    display: none;
-}
-
-label{
-    position: relative;
-    color: #a98467;
-    font-family: 'Poppins', sans-serif;
-    font-size: 10px;
-    border: 2px solid #a98467;
-    border-radius: 5px;
-    padding: 10px 20px;
-    display: flex;
-    align-items:center;
-    cursor: pointer;
-}
-
-label:before{
-    content: "";
-    height: 10px;
-    width: 10px;
-    border: 3px solid #a98467;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-
-input[type="radio"]:checked + label{
-    background-color: #a98467;
-    color: white;
-}
-
-input[type="radio"]:checked + label:before{
-    height: 10px;
-    width: 10px;
-    border:#a98467
 }
