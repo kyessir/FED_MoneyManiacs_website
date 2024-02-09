@@ -107,3 +107,23 @@ input[type=text] {
 .row{
   margin-left: 5%;
 }
+
+@media (max-width: 768px) {
+  .row.row-cols-1.row-cols-md-3.g-4 {
+    justify-content: center; /* Center the cards on smaller screens */
+    margin-top: 20px; /* Adjust the top margin */
+  }
+
+  #top {
+    margin-top: 0; /* Remove the negative top margin */
+  }
+
+  .row {
+    margin-left: 0; /* Reset the left margin */
+    margin-right: 0; /* Reset the right margin */
+  }
+
+  .col {
+    margin-bottom: 20px; /* Add some bottom margin to the columns */
+  }
+}
