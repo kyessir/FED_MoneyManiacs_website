@@ -68,18 +68,27 @@ In this section, you should go over the different parts of your project, and des
     - Using Spotify API to retrieve financial podcasts and display it on our resource5.html.
 - [TradingView Widget API](https://www.tradingview.com/widget/)
     - Using TradingView Widget API to retrieve financial charts and display live time chart such as 24hours on our resource6.html.
-
-- Hey Jesmine, please add yours too!
+- [TradingEconomics](https://tradingeconomics.com/singapore/inflation-cpi)
+  - Graph used in resource to teach user how inflation is important to our daily life and how it affects us individual.
 
 ## Testing
 
 For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
-1. Contact form:
-    1. Go to the "Contact Us" page
+1. Gamestart:
+    1. Go to the "Gamestart" page
     2. Try to submit the empty form and verify that an error message about the required fields appears
     3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+    4. Try to submit the form with all inputs valid and verify that a success message appears. (SK input for game)
+  
+2. Quiz:
+    1. Go to the "Investment Quiz" page
+    2. Try to press two radio button in each question
+  
+3. Resource:
+    1. Go to the "Resource" page
+    2. Try to press two radio button in each category under filter By
+    3. Try to search something in the search bar
 
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
@@ -88,7 +97,7 @@ You should also mention in this section any interesting bugs or problems you dis
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 ## Credits
-
+- 
 ### Content
 - The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
 
@@ -96,24 +105,24 @@ If this section grows too long, you may want to split it off into a separate fil
 - The photos used in this site were obtained from
 - [Google](https://www.google.com/)
 - [Pinterest](https://www.pinterest.com/)
+- [LottieJson](https://lottiefiles.com/)
 
 ### Acknowledgements
-
 - I received inspiration for this project from [Finsol](https://www.finsol.co.nz/).
 - I received inspiration of financial literacy concepts for this project from [CoinDesk](https://www.coindesk.com/).
+- I recieved inspiration of showing concepts on how you can achieve financial literacy from [Binance](https://www.binance.com/en/trade/VITE_USDT?type=spot).
 
 ## Installation
-
 1. Clone this repository.
 2. Navigate to the project directory.
 3. Open `index.html` in your preferred web browser to access the application.
 
 ## Contributors
-
 - [Sian Kim](https://github.com/kyessir)
 - [Jesmine](https://github.com/jigglewiggle101)
 
 ## Acknowledgments
-
+- [TradingEconomics](https://tradingeconomics.com/singapore/inflation-cpi)
+  - Graph used in resource to teach user how inflation is important to our daily life and how it affects us individual.
 - [TinySwords](https://pixelfrog-assets.itch.io/tiny-swords)
     - Game asset used in game implementation, to save time on making game elements as well as provide users a more consistent UI game experience.
