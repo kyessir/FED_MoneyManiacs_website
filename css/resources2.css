@@ -166,7 +166,7 @@ body,div{
   }
   
   /*footer--------------------------------------------------------------------------------------------------------------*/
-  .container-fluid.p-4.pb-0, .mt-3,.p-3,.pt-0, .text-md-start{
+  .container-fluid.p-4.pb-0, .row, .mt-3,.p-3,.pt-0, .text-md-start{
     background-color: #6c584c;
   }
   
@@ -175,28 +175,8 @@ body,div{
     font-size: 20px;
   }
 
+  
 
-  .tradingview-widget-container {
-    width: 1000%; /* Adjust width as needed */
-    text-align: center; /* Center the content horizontally */
-    margin-left: auto; /* Add left margin to center content */
-    margin-right: auto; /* Add right margin to center content */
-  }
-  
-  #tradingview_10557 {
-    display: inline-block; /* Make the widget behave like an inline element */
-    vertical-align: middle; /* Align the widget vertically */
-    height: calc(100% - 32px); /* Adjust height as needed */
-    width: 100%; /* Ensure the widget takes full width */
-  }
-  
-  .tradingview-widget-container__widget{
-    display: inline-block; /* Make the widget behave like an inline element */
-    vertical-align: middle; /* Align the widget vertically */
-    height: calc(100% - 32px); /* Adjust height as needed */
-    width: 100%; /* Ensure the widget takes full width */
-  }
-
-  
-  
+        
+        
 
