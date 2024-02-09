@@ -1,4 +1,4 @@
-*, .faq-body{
+.faq-body{
     background-color: #f0ead2;
   }
  
@@ -155,12 +155,4 @@
   }
   .contact-button input[type="button"]:hover {
     background: #6C584C;
-  }
-
-  
-
-  
-  /*navbar pages font size---------------------------------------------------------------------------------------------------------*/
-  .navbar-nav .nav-link {
-    font-size: 20px;
   }
