@@ -1,10 +1,12 @@
+*{
+  box-sizing: border-box;
+
+}
+
 body,div{
     background-color: #f0ead2;
   }
-  
-  *{
-    box-sizing: border-box;
-  }
+
   
   /*navbar pages font size---------------------------------------------------------------------------------------------------------*/
   .navbar-nav .nav-link {
@@ -82,20 +84,24 @@ body,div{
   .h2-section-title,
   .h3-section-sub-title,
   .number-small {
-    color: #6c584c;
     font-family: 'DM Serif Display', serif;
   }
   .h2-section-title {
+    color: #6c584c;
     font-size: 4.9rem;
     font-weight: 400;
     line-height: 90px;
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
   
   .h3-section-sub-title {
+    color: #6c584c;
     font-size: 30px;
     font-weight: 500;
     line-height: 38px;
     margin-right: 10%;
+    padding-left: 5vw;
   }
   
   .number-small {
@@ -104,14 +110,16 @@ body,div{
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  
+
   .p1,
   .space-10 {
-    color: #6c584c;
+    color: #362c26;
     margin-bottom: 10px;
     font-family: 'Alata', sans-serif;
     font-size: 16px;
     line-height: 27px;
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
   
   .number-small-text {
@@ -136,17 +144,33 @@ body,div{
     margin-left: 30%;
   }
   
+/*content------------------------------------------------------------------------------------------------------------*/
+.p1-noindent{
+  font-family: 'Alata', sans-serif;
+  color: #362c26;
+  padding-right: 5vw;
+}
+
+.container3 img{
+  width:50vw;
+  padding-left: 5vw;
+}
+
   /*footer--------------------------------------------------------------------------------------------------------------*/
   .container-fluid.p-4.pb-0, .row, .mt-3,.p-3,.pt-0, .text-md-start{
     background-color: #6c584c;
   }
   
   /* Media queries for responsiveness */
-  @media only screen and (min-width: 768px) {
+  @media only screen and (max-width: 768px) {
     .container {
       flex-direction: row; /* Change back to row layout for larger screens */
     }
-  
+    
+    .h2-section-title {
+      
+    }
+
     .login__submit:active,
     .login__submit:focus,
     .login__submit:hover {
@@ -162,6 +186,16 @@ body,div{
   
     .h2-section-title-rotate-text {
       margin-left: 0; /* Adjust margin for larger screens */
+    }
+
+    .container3 .row{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container3 img{
+      width:80vw;
+      padding-left: 5vw;
     }
   }
   
