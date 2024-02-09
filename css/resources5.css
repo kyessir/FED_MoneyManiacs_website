@@ -166,10 +166,6 @@ body,div{
     .container {
       flex-direction: row; /* Change back to row layout for larger screens */
     }
-    
-    .h2-section-title {
-      
-    }
 
     .login__submit:active,
     .login__submit:focus,
