@@ -25,9 +25,13 @@ In this section, you should go over the different parts of your project, and des
 
 - Access to a wide range of articles, videos, and guides on various investment options, risks, and strategies.
 
-#### Real-time Inflation Rates
+#### Real-time Stock Charts
 
-- Utilizes an API to fetch and display real-time inflation rates globally.
+- Utilizes an API to fetch and display real-time stock charts.
+
+#### Spotify
+
+- Utilizes an Iframe Spotify API to fetch and display financial podcasts.
 
 ### Practical Money-Saving Strategies
 
@@ -60,6 +64,10 @@ In this section, you should go over the different parts of your project, and des
 
 - [Bootstrap](https://getbootstrap.com/)
     - Templates are used to simplify and make the layout of certain elements neater and more pleasing to look at.
+- [Spotify API](https://developer.spotify.com/documentation/embeds/tutorials/using-the-iframe-api/)
+    - Using Spotify API to retrieve financial podcasts and display it on our resource5.html.
+- [TradingView Widget API](https://www.tradingview.com/widget/)
+    - Using TradingView Widget API to retrieve financial charts and display live time chart such as 24hours on our resource6.html.
 
 - Hey Jesmine, please add yours too!
 
@@ -86,12 +94,13 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ### Media
 - The photos used in this site were obtained from
-
+- [Google](https://www.google.com/)
 - [Pinterest](https://www.pinterest.com/)
 
 ### Acknowledgements
 
 - I received inspiration for this project from [Finsol](https://www.finsol.co.nz/).
+- I received inspiration of financial literacy concepts for this project from [CoinDesk](https://www.coindesk.com/).
 
 ## Installation
 
