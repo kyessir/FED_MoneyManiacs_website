@@ -1,12 +1,39 @@
 body{
     background-color: #f0ead2;
+    overflow: inherit;
 }
 
-.head{
+/*navbar pages font size---------------------------------------------------------------------------------------------------------*/
+.navbar-nav .nav-link {
+  font-size: 20px;
+}
+
+.head h2{
 font-family: 'DM Serif Display', serif;
 font-size:40px;
-text-align: center;
+text-align: left;
+color:#6c584c;
+padding-left: 5vw;
+padding-right: 5vw;
+font-size: 4.9em;
+font-weight: 400;
+line-height: 90px;
 }
+
+.form-group{
+  font-family: 'Alata', sans-serif;
+}
+
+.form-check{
+  font-family: 'Alata', sans-serif;
+  padding-left: 5vw;
+}
+
+.text-left{
+  font-family: 'Alata', sans-serif;
+
+}
+
 .table-custom td {
     background-color: #f0ead2; /* Set the background color */
 
@@ -26,7 +53,7 @@ text-align: center;
 
   }
 
-  /*footer--------------------------------------------------------------------------------------------------------------*/
+/*footer--------------------------------------------------------------------------------------------------------------*/
 .container-fluid.p-4.pb-0, .row, .mt-3,.p-3,.pt-0, .text-md-start{
   background-color: #6c584c;
 }
