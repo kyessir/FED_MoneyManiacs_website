@@ -1,0 +1,182 @@
+body,div{
+    background-color: #f0ead2;
+  }
+  
+  *{
+    box-sizing: border-box;
+  }
+  
+  /*navbar pages font size---------------------------------------------------------------------------------------------------------*/
+  .navbar-nav .nav-link {
+    font-size: 20px;
+  }
+  
+  /*homepage banner--------------------------------------------------------------------------------------------------------------------*/
+  .homepage-banner{
+    max-width: 100%;
+    height: 100vh;
+    overflow:inherit;
+    background-image: url("../img/homepage-moneyfalling.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #intro-para{
+    text-align: center;
+    place-items: center;
+  }
+  
+  #intro-para h2 + p{
+    color: #000000;
+  }
+  
+  /*button---------------------------------------------------------------------------------------------------------*/
+  .btn{
+    background-color: #6C584C;
+    border-radius: 10px;
+    color: #f0ead2;
+    padding: 12px 16px;
+  }
+  
+  .text-custom {
+    background-color: #6C584C;
+  }
+  .col-md-2 col-lg-2 col-xl-2 mx-auto mt-3{
+    color:#6C584C;
+    background-color: #f0ead2; 
+    
+  }
+  
+  /* Container for the two columns ------------------------------------------------------------------------------------------*/
+  /* Apply styles to the outermost .container */
+  .container {
+    display: flex;
+  }
+  
+  /* Apply styles to the columns within the outermost .container */
+  .container > .col-left {
+    flex: 0 0 30%; /* Set the first column to take 30% of the width */
+  }
+  
+  .container > .col-right {
+    flex: 0 0 70%; /* Set the second column to take 70% of the width */
+  }
+  
+  /* Additional styling for the inner .container */
+  .container .container {
+    display: flex;
+  }
+  
+  /* Apply styles to the columns within the inner .container */
+  .container .container > .col-left {
+    flex: 0 0 30%; /* Set the first column to take 30% of the width */
+  }
+  
+  .container .container > .col-right {
+    flex: 0 0 70%; /* Set the second column to take 70% of the width */
+  }
+  
+  .h2-section-title,
+  .h3-section-sub-title,
+  .number-small {
+    color: #6c584c;
+    font-family: 'DM Serif Display', serif;
+  }
+  .h2-section-title {
+    font-size: 4.9rem;
+    font-weight: 400;
+    line-height: 90px;
+  }
+  
+  .h3-section-sub-title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 38px;
+    margin-right: 10%;
+  }
+  
+  .number-small {
+    font-size: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .p1,
+  .space-10 {
+    color: #6c584c;
+    margin-bottom: 10px;
+    font-family: 'Alata', sans-serif;
+    font-size: 16px;
+    line-height: 27px;
+  }
+  
+  .number-small-text {
+    transform: rotate(-90deg);
+    color: #6c584c;
+    font-family: 'DM Serif Display', serif;
+    font-size: 40px;
+    line-height: 40px;
+    margin-right: 100%;
+    margin-top: 10%;
+  }
+  
+  .h2-section-title-rotate-text {
+    transform: rotate(-90deg);
+    color: #6c584c;
+    font-family: 'DM Serif Display', serif;
+    font-size: 4.9rem;
+    font-weight: 400;
+    line-height: 90px;
+    margin-right: 60%;
+    margin-top: 30%;
+    margin-left: 30%;
+  }
+  
+  /*footer--------------------------------------------------------------------------------------------------------------*/
+  .container-fluid.p-4.pb-0, .row, .mt-3,.p-3,.pt-0, .text-md-start{
+    background-color: #6c584c;
+  }
+  
+  /* Media queries for responsiveness */
+  @media only screen and (min-width: 768px) {
+    .container {
+      flex-direction: row; /* Change back to row layout for larger screens */
+    }
+  
+    .login__submit:active,
+    .login__submit:focus,
+    .login__submit:hover {
+      border-color: #6A679E;
+      outline: none;
+    }
+  
+    .col-left,
+    .col-right {
+      flex: 1;
+      margin-bottom: 0; /* Remove margin between columns */
+    }
+  
+    .h2-section-title-rotate-text {
+      margin-left: 0; /* Adjust margin for larger screens */
+    }
+  }
+  
+  /*footer--------------------------------------------------------------------------------------------------------------*/
+  .container-fluid.p-4.pb-0, .row, .mt-3,.p-3,.pt-0, .text-md-start{
+    background-color: #6c584c;
+  }
+  
+  /*navbar pages font size---------------------------------------------------------------------------------------------------------*/
+  .navbar-nav .nav-link {
+    font-size: 20px;
+  }
+
+  
+
+        
+        
+
