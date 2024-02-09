@@ -62,7 +62,6 @@ function openOverlay1() {
 }
 
 
-
 function openOverlay1() {
     document.getElementById('overlay1').style.display = 'flex';
 }
