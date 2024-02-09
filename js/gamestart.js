@@ -28,40 +28,38 @@ function displayAchievementMessage() {
     // If there is no record for the previous day, set didNotSpendOnWants to false
     if (!lastDayRecordExists) {
         didNotSpendOnWants = false;
+        message = "Previous day record not found, please record for that day first!";
     }
+    else{
+        // Check if the user has achieved each milestone based on the current day's records
+        records.forEach(function(record) {
+            if (record.purpose === "Record once in the book.") {
+                recordOnceInBook = true;
+            } else if (record.purpose === "Did not spend on wants for one day.") {
+                didNotSpendOnWants = true; // User spent on wants, so this achievement is not met
+            } else if (record.purpose === "Shout it out, game's completed!") {
+                completedGame = true;
+            }
 
-    // Check if the user has achieved each milestone based on the current day's records
-    records.forEach(function(record) {
-        if (record.purpose === "Record once in the book.") {
-            recordOnceInBook = true;
-        } else if (record.purpose === "Did not spend on wants for one day.") {
-            didNotSpendOnWants = true; // User spent on wants, so this achievement is not met
-        } else if (record.purpose === "Shout it out, game's completed!") {
-            completedGame = true;
+        // Display achievement messages based on conditions
+        var message = "";
+        if (recordOnceInBook) {
+            message += "Congratulations on making a record!\n";
         }
-    });
+        if (didNotSpendOnWants) {
+            message += "Completed all 5 days without spending on wants.\n";
+        }
+        if (completedGame) {
+         message += "Shout it out! The game is completed!\n";
+        }
+        });
 
-    // Display achievement messages based on conditions
-    var message = "";
-    if (recordOnceInBook) {
-        message += "Congratulations on making a record!\n";
     }
-    if (didNotSpendOnWants) {
-        message += "Completed all 5 days without spending on wants.\n";
-    }
-    if (completedGame) {
-        message += "Shout out! The game is completed!\n";
-    }
+
 
     // Display the message
     alert(message);
 }
-
-function openOverlay1() {
-    document.getElementById('overlay1').style.display = 'flex';
-}
-
-
 
 function openOverlay1() {
     document.getElementById('overlay1').style.display = 'flex';
@@ -100,8 +98,25 @@ function recordExpense() {
         records = records.slice(records.length - 35);
     }
 
+    // Change the background when new highest day is recorded
+    var body = document.body;
+    var highest = -1;
+    if (Math.max(records.day) == 1) {
+      body.style.backgroundImage = 'url("../img/map01.png")'; // Change URL accordingly
+    }
+    else if (Math.max(records.day) == 2) {
+        body.style.backgroundImage = 'url("../img/map02.png")';
+    }
+    else {
+      body.style.backgroundImage = 'url("../img/map00.png")'; // Default URL
+    }
+    console.log(records.day);
+    console.log(Math.max(records.day));
+
     // Store the updated records back to localStorage
     localStorage.setItem('spendingRecords', JSON.stringify(records));
+
+    displayAchievementMessage();
 
     // Close the overlay after recording the expense
     closeOverlay1(); // Call closeOverlay1 function instead of directly setting display to none
