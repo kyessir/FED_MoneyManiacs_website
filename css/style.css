@@ -22,6 +22,14 @@ body,div{
   background-attachment: fixed;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+}
+
+.lottie-animation {
+  margin-top: 20px; /* Adjust margin as needed */
 }
 
 #intro-para{
@@ -54,6 +62,7 @@ body,div{
 /* Apply styles to the outermost .container */
 .container {
   display: flex;
+  flex-direction: column;
 }
 
 /* Apply styles to the columns within the outermost .container */
@@ -80,42 +89,49 @@ body,div{
 }
 
 .h2-section-title,
-.h3-section-sub-title,
-.number-small {
-  color: #6c584c;
-  font-family: 'DM Serif Display', serif;
-}
-.h2-section-title {
-  font-size: 4.9rem;
-  font-weight: 400;
-  line-height: 90px;
-}
-
-.h3-section-sub-title {
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 38px;
-  margin-right: 10%;
-}
-
-.number-small {
-  font-size: 40px;
-  line-height: 40px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.p1,
-.space-10 {
-  color: #6c584c;
-  margin-bottom: 10px;
-  font-family: 'Alata', sans-serif;
-  font-size: 16px;
-  line-height: 27px;
-}
+  .h3-section-sub-title,
+  .number-small {
+    font-family: 'DM Serif Display', serif;
+  }
+  .h2-section-title {
+    color: #362c26;
+    font-size: 4.9rem;
+    font-weight: 400;
+    line-height: 90px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  
+  .h3-section-sub-title {
+    color: #6c584c;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 38px;
+    margin-right: 10%;
+    padding-left: 5vw;
+  }
+  
+  .number-small {
+    color: #362c26;
+    font-size: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .p1,
+  .space-10 {
+    color: #362c26;
+    margin-bottom: 10px;
+    font-family: 'Alata', sans-serif;
+    font-size: 16px;
+    line-height: 27px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
 
 .number-small-text {
-  transform: rotate(-90deg);
+  transform: rotate(0deg);
   color: #6c584c;
   font-family: 'DM Serif Display', serif;
   font-size: 40px;
@@ -125,15 +141,17 @@ body,div{
 }
 
 .h2-section-title-rotate-text {
-  transform: rotate(-90deg);
-  color: #6c584c;
+  transform: rotate(0deg);
+  color: #362c26;
   font-family: 'DM Serif Display', serif;
   font-size: 4.9rem;
   font-weight: 400;
   line-height: 90px;
-  margin-right: 60%;
-  margin-top: 30%;
-  margin-left: 30%;
+}
+
+.container2 .container3 .row{
+  display: flex;
+  flex-direction: column;
 }
 
 /*footer--------------------------------------------------------------------------------------------------------------*/
@@ -162,6 +180,14 @@ body,div{
 
   .h2-section-title-rotate-text {
     margin-left: 0; /* Adjust margin for larger screens */
+    transform: rotate(-90deg);
+    margin-right: 60%;
+    margin-top: 30%;
+    margin-left: 30%;
+  }
+
+  .number-small-text {
+    transform: rotate(-90deg);
   }
 }
 

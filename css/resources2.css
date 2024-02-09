@@ -87,7 +87,7 @@ body,div{
   }
   .h2-section-title {
     color: #362c26;
-    font-size: 4.9rem;
+    font-size: 2em;
     font-weight: 400;
     line-height: 90px;
     padding-left: 5vw;
@@ -173,6 +173,15 @@ body,div{
   @media only screen and (min-width: 768px) {
     .container {
       flex-direction: row; /* Change back to row layout for larger screens */
+    }
+
+    .h2-section-title {
+      color: #362c26;
+      font-size: 4.9rem;
+      font-weight: 400;
+      line-height: 90px;
+      padding-left: 5vw;
+      padding-right: 5vw;
     }
 
     #img1{
