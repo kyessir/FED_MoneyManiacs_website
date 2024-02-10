@@ -154,9 +154,9 @@ function displayAchievementMessage(selectedDay) {
         message += "Congratulations on making a record!\n";
     }
     if (didNotSpendOnWants) {
-        message += "Congratulations on making a record!\n";
+       
         message += "Completed all 5 days without spending on wants.\n";
-        message = "No achievements earned for the selected day.\n";
+       
     }
     if (completedGame) {
         message += "Shout out! The game is completed!\n";
