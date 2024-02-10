@@ -1,62 +1,63 @@
-function displayAchievementMessage() {
-    // Retrieve existing records from localStorage
-    var records = JSON.parse(localStorage.getItem('spendingRecords'));
 
-    // Check if records exist
-    if (!records || !Array.isArray(records) || records.length === 0) {
-        return; // No records found, so no achievements to display
-    }
 
-    // Check if each achievement condition is met
-    var recordOnceInBook = true;
-    var didNotSpendOnWants = true; 
-    var completedGame = true;
-    var lastDayRecordExists = true;
-
-    // Retrieve the selected day from the dropdown
-    var daySelect = document.getElementById('daySelect');
-    var selectedDay = daySelect.value;
-
-    // Check if there is a record for the previous day
-    var previousDay = "day" + (parseInt(selectedDay.slice(-1)) - 1);
-    records.forEach(function(record) {
-        if (record.day === previousDay) {
-            lastDayRecordExists = true;
-        }
-    });
-
-    // If there is no record for the previous day, set didNotSpendOnWants to false
-    if (!lastDayRecordExists) {
-        didNotSpendOnWants = false;
-    }
-
-    // Check if the user has achieved each milestone based on the current day's records
-    records.forEach(function(record) {
-        if (record.purpose === "Record once in the book.") {
-            recordOnceInBook = true;
-        } else if (record.purpose === "Did not spend on wants for one day.") {
-            didNotSpendOnWants = true; // User spent on wants, so this achievement is not met
-        } else if (record.purpose === "Shout it out, game's completed!") {
-            completedGame = true;
-        }
-    });
-
-    // Display achievement messages based on conditions
-    var message = "";
-    if (recordOnceInBook) {
-        message += "Congratulations on making a record!\n";
-    }
-    if (didNotSpendOnWants) {
-        message += "Completed all 5 days without spending on wants.\n";
-    }
-    if (completedGame) {
-        message += "Shout out! The game is completed!\n";
-    }
-
-    // Display the message
-    alert(message);
+// Update the image based on the selected day
+var imageUrl = getImageUrlForDay(selectedDay);
+if (imageUrl) {
+    document.getElementById('dayImage').src = imageUrl;
+} else {
+    console.error('Image URL not found for the selected day.');
 }
 
+// Display achievement messages and update image based on the selected day
+displayAchievementMessage(selectedDay);
+
+
+
+// Function to update the background image based on the selected day
+function updateBackgroundImage(day) {
+    var imageUrl = getImageUrlForDay(day);
+    if (imageUrl) {
+        document.body.style.backgroundImage = "url('" + imageUrl + "')";
+    } else {
+        console.error('Image URL not found for the selected day.');
+    }
+}
+
+// Function to retrieve the image URL for a given day
+function getImageUrlForDay(day) {
+    var defaultImageUrl = "img/map_07.png"; // Default image URL
+    var imageFilenames = [
+        "img/map_01.png",
+        "img/map_02.png",
+        "img/map_03.png",
+        "img/map_04.png",
+        "img/map_05.png",
+        "img/map_06.png",
+        "img/map_07.png"
+    ]; // Image URLs for each day
+
+    // Ensure the day is within the valid range
+    if (day >= 1 && day <= imageFilenames.length) {
+        return imageFilenames[day - 1]; // Subtract 1 because arrays are zero-indexed
+    } else {
+        return defaultImageUrl; // Return the default image URL if the day is out of range
+    }
+}
+
+// Set the initial background image when the page loads
+window.onload = function() {
+    var currentDay = 1; // Set the initial day (replace with your logic)
+    updateBackgroundImage(currentDay);
+
+// Update the background image when the selected day changes
+document.getElementById('daySelect').addEventListener('change', function() {
+    var selectedDay = parseInt(this.value);
+    updateBackgroundImage(selectedDay);
+});
+
+};
+
+// Function to open overlay
 function openOverlay1() {
     document.getElementById('overlay1').style.display = 'flex';
 }
@@ -66,29 +67,27 @@ function openOverlay1() {
     document.getElementById('overlay1').style.display = 'flex';
 }
 
+// Function to record expense
 function recordExpense() {
     var daySelect = document.getElementById('daySelect');
     var selectedDay = daySelect.value; // Retrieve the selected day from the dropdown
 
-    var spendingPurposeInput = document.querySelector('.spendingPurpose');
-    var needRadio = document.getElementById('flexRadioDefault1');
-    var amountSpentInput = document.querySelector('.amountSpent');
-    var weeklyAllowanceInput = document.querySelector('.weeklyAllowance');
+    // Retrieve other form inputs
+    var spendingPurpose = document.querySelector('.spendingPurpose').value;
+    var isNeed = document.getElementById('flexRadioDefault1').checked ? 'Need' : 'Want';
+    var amountSpent = parseFloat(document.querySelector('.amountSpent').value) || 0;
+    var weeklyAllowance = parseFloat(document.querySelector('.weeklyAllowance').value) || 0;
 
-    var spendingPurpose = spendingPurposeInput.value;
-    var isNeed = needRadio.checked ? 'Need' : 'Want';
-    var amountSpent = parseFloat(amountSpentInput.value) || 0;
-    var weeklyAllowance = parseFloat(weeklyAllowanceInput.value) || 0;
-
+    // Create a record object
     var record = {
-        day: selectedDay, // Store the selected day in the record
+        day: selectedDay,
         purpose: spendingPurpose,
         type: isNeed,
         amount: amountSpent,
         weeklyAllowance: weeklyAllowance
     };
 
-    // Retrieve existing records from localStorage
+    // Retrieve existing records from localStorage or initialize an empty array
     var records = JSON.parse(localStorage.getItem('spendingRecords')) || [];
 
     // Add the new record to the array of records
@@ -102,13 +101,61 @@ function recordExpense() {
     // Store the updated records back to localStorage
     localStorage.setItem('spendingRecords', JSON.stringify(records));
 
+    // Update the background image based on the highest recorded day
+    var highestDay = records.reduce((maxDay, record) => Math.max(maxDay, parseInt(record.day)), -1);
+    if (highestDay !== -1) {
+        updateBackgroundImage(highestDay);
+    }
+
+    // Display achievement messages and update image based on the selected day
+    displayAchievementMessage(selectedDay);
+
     // Close the overlay after recording the expense
-    closeOverlay1(); // Call closeOverlay1 function instead of directly setting display to none
+    closeOverlay1();
 }
 
+// Function to close overlay
 function closeOverlay1() {
     document.getElementById('overlay1').style.display = 'none';
 }
+
+function displayAchievementMessage(selectedDay) {
+    var records = JSON.parse(localStorage.getItem('spendingRecords'));
+
+    if (!records || !Array.isArray(records) || records.length === 0) {
+        return; // No records found
+    }
+
+    var recordsForDay = records.filter(record => record.day === ("day" + selectedDay));
+
+    var recordOnceInBook = recordsForDay.some(record => record.purpose === "Record once in the book.");
+    var didNotSpendOnWants = recordsForDay.every(record => record.type === "Need");
+    var completedGame = recordsForDay.some(record => record.purpose === "Shout it out, game's completed!");
+
+    var message = "";
+
+    // Check each condition separately and concatenate appropriate messages
+    if (recordOnceInBook) {
+        message += "Congratulations on making a record!\n";
+    }
+    if (didNotSpendOnWants) {
+        message += "Congratulations on making a record!\n";
+        message += "Completed all 5 days without spending on wants.\n";
+        message = "No achievements earned for the selected day.\n";
+    }
+    if (completedGame) {
+        message += "Shout out! The game is completed!\n";
+    }
+
+    // If no achievements were met, display a message indicating none were achieved
+    if (message === "") {
+        message = "No achievements earned for the selected day.\n";
+    }
+
+    // Display the concatenated message
+    alert(message);
+}
+
 
 function deleteRecord(index) {
     // Retrieve existing records from localStorage

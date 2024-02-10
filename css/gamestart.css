@@ -129,3 +129,22 @@ form{
   gap: 15px;
 }
 
+/* Hide content by default */
+.content {
+  display: none;
+}
+
+.rotate-warning {
+  display: block;
+ /
+}
+
+/* Display content when in landscape orientation */
+@media screen and (orientation: landscape) {
+  .content {
+    display: block;
+  }
+  .rotate-warning {
+    display: none;
+  }
+}
