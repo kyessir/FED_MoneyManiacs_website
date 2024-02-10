@@ -69,8 +69,6 @@ These are some feature we would like to implement in the future.
 - [LottieJson](https://lottiefiles.com/)
   - Animations from here are used to make the website more fun and interactive to look at, adding into interactions in the website.
 
-- [
-
 ## Testing
 
 For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
@@ -133,6 +131,8 @@ The photos used in this site were obtained from
   - Game asset used in game implementation, to save time on making game elements as well as provide users a more consistent UI and game experience.
 - [Tiled](https://www.mapeditor.org/)
   - Used in making the images for the game
+- [Google Fonts](https://fonts.google.com/)
+  - Used in interface to have a nicer feel for the UI
 
 ### AI tools
 - [ChatGPT](https://chat.openai.com/)
