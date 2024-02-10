@@ -136,7 +136,7 @@ form{
 
 .rotate-warning {
   display: block;
- /
+  display: none;
 }
 
 /* Display content when in landscape orientation */
