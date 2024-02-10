@@ -25,15 +25,15 @@ function updateBackgroundImage(day) {
 
 // Function to retrieve the image URL for a given day
 function getImageUrlForDay(day) {
-    var defaultImageUrl = "img/map_07.png"; // Default image URL
+    var defaultImageUrl = "img/map07.png"; // Default image URL
     var imageFilenames = [
-        "img/map_01.png",
-        "img/map_02.png",
-        "img/map_03.png",
-        "img/map_04.png",
-        "img/map_05.png",
-        "img/map_06.png",
-        "img/map_07.png"
+        "img/map01.png",
+        "img/map02.png",
+        "img/map03.png",
+        "img/map04.png",
+        "img/map05.png",
+        "img/map06.png",
+        "img/map07.png"
     ]; // Image URLs for each day
 
     // Ensure the day is within the valid range
@@ -102,13 +102,13 @@ function recordExpense() {
     var body = document.body;
     var highest = -1;
     if (Math.max(records.day) == 1) {
-      body.style.backgroundImage = 'url("../img/map01.png")'; // Change URL accordingly
+      body.style.backgroundImage = 'url("img/map01.png")'; // Change URL accordingly
     }
     else if (Math.max(records.day) == 2) {
-        body.style.backgroundImage = 'url("../img/map02.png")';
+        body.style.backgroundImage = 'url("img/map02.png")';
     }
     else {
-      body.style.backgroundImage = 'url("../img/map00.png")'; // Default URL
+      body.style.backgroundImage = 'url("img/map00.png")'; // Default URL
     }
     console.log(records.day);
     console.log(Math.max(records.day));
@@ -154,9 +154,9 @@ function displayAchievementMessage(selectedDay) {
         message += "Congratulations on making a record!\n";
     }
     if (didNotSpendOnWants) {
-       
+        message += "Congratulations on making a record!\n";
         message += "Completed all 5 days without spending on wants.\n";
-       
+        message += "Shout out! The game is completed!\n";
     }
     if (completedGame) {
         message += "Shout out! The game is completed!\n";
