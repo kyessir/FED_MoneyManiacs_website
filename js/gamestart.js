@@ -162,11 +162,6 @@ function displayAchievementMessage(selectedDay) {
         message += "Shout out! The game is completed!\n";
     }
 
-    // If no achievements were met, display a message indicating none were achieved
-    if (message === "") {
-        message = "No achievements earned for the selected day.\n";
-    }
-
     // Display the concatenated message
     alert(message);
 }
