@@ -148,3 +148,13 @@ form{
     display: none;
   }
 }
+
+/* Display content when in landscape orientation */
+@media screen and (orientation: portrait) {
+  .content {
+    display: block;
+  }
+  .rotate-warning {
+    display: none;
+  }
+}
