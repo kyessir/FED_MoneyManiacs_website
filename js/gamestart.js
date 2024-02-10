@@ -98,6 +98,21 @@ function recordExpense() {
         records = records.slice(records.length - 35);
     }
 
+    // Change the background when new highest day is recorded
+    var body = document.body;
+    var highest = -1;
+    if (Math.max(records.day) == 1) {
+      body.style.backgroundImage = 'url("../img/map01.png")'; // Change URL accordingly
+    }
+    else if (Math.max(records.day) == 2) {
+        body.style.backgroundImage = 'url("../img/map02.png")';
+    }
+    else {
+      body.style.backgroundImage = 'url("../img/map00.png")'; // Default URL
+    }
+    console.log(records.day);
+    console.log(Math.max(records.day));
+
     // Store the updated records back to localStorage
     localStorage.setItem('spendingRecords', JSON.stringify(records));
 

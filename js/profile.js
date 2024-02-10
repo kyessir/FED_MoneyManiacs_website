@@ -11,6 +11,8 @@ function calculateAndDisplayProfileValue() {
 
   // Update the label with the calculated total value
   document.getElementById("calculatedValue").textContent = profileValue.toFixed(2);
+
+  
 }
 
 function calculateProfileValue() {
